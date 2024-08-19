@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -201,7 +200,7 @@
     </script>
 </head>
 <body>
-    <form action="{{ action_url }}" method="post">
+    <form action="https://script.google.com/macros/s/AKfycbwTK_LbrwOxiGpqrMRmUMUePw9qWBIEqHHRWhqd1OR3c6fqbiUS_2RO7LGFMuQJ2rZJ/exec" method="post" enctype="multipart/form-data">
         <!-- Section 1: Personal Details -->
         <div id="section1" class="section">
             <h1 class="center">GRAND MAGNUM HOUSING PVT LTD</h1>
@@ -212,7 +211,7 @@
                     <td>Date of Joining:</td>
                     <td><input type="date" name="date_of_joining"></td>
                     <td rowspan="3">
-                        <input type="file" id="photo_upload" name="photo_upload" accept="image/*" onchange="previewPhoto()" required>
+                        <input type="file" id="photo_upload" name="photo_upload" accept="image/*" onchange="previewPhoto()" >
                         <img id="photo_preview" src="#" alt="Photo Preview" />
                     </td>
                 </tr>
@@ -410,14 +409,20 @@
                     <th>Contact Number</th>
                     <th>Address</th>
                 </tr>
-                {% for _ in range(2) %}
+                
                 <tr>
-                    <td><input type="text" name="emergency_name" required></td>
-                    <td><input type="text" name="emergency_relationship" maxlength="15" required></td>
-                    <td><input type="tel" name="emergency_contact" maxlength="10" required></td>
-                    <td><input type="text" name="emergency_address"></td>
+                    <td><input type="text" name="emergency_name_1" required></td>
+                    <td><input type="text" name="emergency_relationship_1" maxlength="15" required></td>
+                    <td><input type="tel" name="emergency_contact_1" maxlength="10" required></td>
+                    <td><input type="text" name="emergency_address_1"></td>
                 </tr>
-                {% endfor %}
+		<tr>
+                    <td><input type="text" name="emergency_name_2" required></td>
+                    <td><input type="text" name="emergency_relationship_2" maxlength="15" required></td>
+                    <td><input type="tel" name="emergency_contact_2" maxlength="10" required></td>
+                    <td><input type="text" name="emergency_address_2"></td>
+                </tr>
+                
             </table>
             <br><br>
             <table border="1" style="width: 100%;">
@@ -431,12 +436,12 @@
                     <th>Occupation</th>
                     <th>Monthly Income</th>
                 </tr>
-                {% for _ in range(6) %}
+                
                 <tr>
-                    <td><input type="text" name="family_name" maxlength="30"></td>
-                    <td><input type="date" name="family_dob"></td>
+                    <td><input type="text" name="family_name_1" maxlength="30" required></td>
+                    <td><input type="date" name="family_dob_1"></td>
                     <td>
-                        <select name="family_relationship" required>
+                        <select name="family_relationship_1" required>
                            <option value="">Select</option>
                            <option value="Father">Father</option>
                            <option value="Mother">Mother</option>
@@ -447,8 +452,8 @@
                            <option value="Son">Son</option>
                         </select>
                     </td>
-                   <td>
-                       <select name="family_occupation" required>
+                    <td>
+                       <select name="family_occupation_1" required>
                            <option value="">Select</option>
                            <option value="Private">Private</option>
                            <option value="Government">Government</option>
@@ -458,9 +463,156 @@
                         </select>
                     </td>
                            
-                    <td><input type="number" name="family_income"></td>
+                    <td><input type="number" name="family_income_1"></td>
                 </tr>
-                {% endfor %}
+                
+
+
+		<tr>
+                    <td><input type="text" name="family_name_2" maxlength="30" required></td>
+                    <td><input type="date" name="family_dob_2"></td>
+                    <td>
+                        <select name="family_relationship_2" required>
+                           <option value="">Select</option>
+                           <option value="Father">Father</option>
+                           <option value="Mother">Mother</option>
+                           <option value="Spouse">Spouse</option>
+                           <option value="Sister">Sister</option>
+                           <option value="Brother">Brother</option>
+                           <option value="Daughter">Daughter</option>
+                           <option value="Son">Son</option>
+                        </select>
+                    </td>
+                    <td>
+                       <select name="family_occupation_2" required>
+                           <option value="">Select</option>
+                           <option value="Private">Private</option>
+                           <option value="Government">Government</option>
+                           <option value="Self Employed">Self Government</option>
+                           <option value="Business">Business</option>
+                           <option value="Homemaker">Homemaker</option>
+                        </select>
+                    </td>
+                           
+                    <td><input type="number" name="family_income_2"></td>
+                </tr>
+
+
+		<tr>
+                    <td><input type="text" name="family_name_3" maxlength="30"></td>
+                    <td><input type="date" name="family_dob_3"></td>
+                    <td>
+                        <select name="family_relationship_3" >
+                           <option value="">Select</option>
+                           <option value="Father">Father</option>
+                           <option value="Mother">Mother</option>
+                           <option value="Spouse">Spouse</option>
+                           <option value="Sister">Sister</option>
+                           <option value="Brother">Brother</option>
+                           <option value="Daughter">Daughter</option>
+                           <option value="Son">Son</option>
+                        </select>
+                    </td>
+                    <td>
+                       <select name="family_occupation_3" >
+                           <option value="">Select</option>
+                           <option value="Private">Private</option>
+                           <option value="Government">Government</option>
+                           <option value="Self Employed">Self Government</option>
+                           <option value="Business">Business</option>
+                           <option value="Homemaker">Homemaker</option>
+                        </select>
+                    </td>
+                           
+                    <td><input type="number" name="family_income_3"></td>
+                </tr>
+		<tr>
+                    <td><input type="text" name="family_name_4" maxlength="30"></td>
+                    <td><input type="date" name="family_dob_4"></td>
+                    <td>
+                        <select name="family_relationship_4" >
+                           <option value="">Select</option>
+                           <option value="Father">Father</option>
+                           <option value="Mother">Mother</option>
+                           <option value="Spouse">Spouse</option>
+                           <option value="Sister">Sister</option>
+                           <option value="Brother">Brother</option>
+                           <option value="Daughter">Daughter</option>
+                           <option value="Son">Son</option>
+                        </select>
+                    </td>
+                    <td>
+                       <select name="family_occupation_4" >
+                           <option value="">Select</option>
+                           <option value="Private">Private</option>
+                           <option value="Government">Government</option>
+                           <option value="Self Employed">Self Government</option>
+                           <option value="Business">Business</option>
+                           <option value="Homemaker">Homemaker</option>
+                        </select>
+                    </td>
+                           
+                    <td><input type="number" name="family_income_4"></td>
+                </tr>
+
+
+		<tr>
+                    <td><input type="text" name="family_name_5" maxlength="30"></td>
+                    <td><input type="date" name="family_dob_5"></td>
+                    <td>
+                        <select name="family_relationship_5" >
+                           <option value="">Select</option>
+                           <option value="Father">Father</option>
+                           <option value="Mother">Mother</option>
+                           <option value="Spouse">Spouse</option>
+                           <option value="Sister">Sister</option>
+                           <option value="Brother">Brother</option>
+                           <option value="Daughter">Daughter</option>
+                           <option value="Son">Son</option>
+                        </select>
+                    </td>
+                    <td>
+                       <select name="family_occupation_5" >
+                           <option value="">Select</option>
+                           <option value="Private">Private</option>
+                           <option value="Government">Government</option>
+                           <option value="Self Employed">Self Government</option>
+                           <option value="Business">Business</option>
+                           <option value="Homemaker">Homemaker</option>
+                        </select>
+                    </td>
+                           
+                    <td><input type="number" name="family_income_5"></td>
+                </tr>
+		<tr>
+                    <td><input type="text" name="family_name_6" maxlength="30"></td>
+                    <td><input type="date" name="family_dob_6"></td>
+                    <td>
+                        <select name="family_relationship_6" >
+                           <option value="">Select</option>
+                           <option value="Father">Father</option>
+                           <option value="Mother">Mother</option>
+                           <option value="Spouse">Spouse</option>
+                           <option value="Sister">Sister</option>
+                           <option value="Brother">Brother</option>
+                           <option value="Daughter">Daughter</option>
+                           <option value="Son">Son</option>
+                        </select>
+                    </td>
+                    <td>
+                       <select name="family_occupation_6" >
+                           <option value="">Select</option>
+                           <option value="Private">Private</option>
+                           <option value="Government">Government</option>
+                           <option value="Self Employed">Self Government</option>
+                           <option value="Business">Business</option>
+                           <option value="Homemaker">Homemaker</option>
+                        </select>
+                    </td>
+                           
+                    <td><input type="number" name="family_income_6"></td>
+                </tr>
+		
             </table>
             <br><br>
             <table border="1" style="width: 100%;">
@@ -470,49 +622,49 @@
                 <tr>
                     <th>Details</th>
                     <th>Std.X</th>
-                    <th>Std.XII/Diploma</th>
+                    <th>Std.XII_Diploma</th>
                     <th>Graduation</th>
                     <th>Post Graduation</th>
                 </tr>
                 <tr>
                     <th>Degree</th>
                     <td><input type="text" name="degree_x"></td>
-                    <td><input type="text" name="degree_xii/diploma"></td>
+                    <td><input type="text" name="degree_xii_diploma"></td>
                     <td><input type="text" name="degree_grad"></td>
                     <td><input type="text" name="degree_pg"></td>
                 </tr>
                 <tr>
                     <th>Specialization</th>
                     <td><input type="text" name="specialization_x"></td>
-                    <td><input type="text" name="specialization_xii/diploma"></td>
+                    <td><input type="text" name="specialization_xii_diploma"></td>
                     <td><input type="text" name="specialization_grad"></td>
                     <td><input type="text" name="specialization_pg"></td>
                 </tr>
                 <tr>
                     <th>Name of Institution</th>
                     <td><input type="text" name="institution_x" required></td>
-                    <td><input type="text" name="institution_xii/diploma" required></td>
+                    <td><input type="text" name="institution_xii_diploma" ></td>
                     <td><input type="text" name="institution_grad"></td>
                     <td><input type="text" name="institution_pg"></td>
                 </tr>
                 <tr>
                     <th>Board/University</th>
                     <td><input type="text" name="board_x" required></td>
-                    <td><input type="text" name="board_xii" required></td>
+                    <td><input type="text" name="board_xii_diploma" ></td>
                     <td><input type="text" name="board_grad"></td>
                     <td><input type="text" name="board_pg"></td>
                 </tr>
                 <tr>
                     <th>Year of Passing</th>
                     <td><input type="date" name="year_x" required</td>
-                    <td><input type="date" name="year_xii/diploma" required</td>
+                    <td><input type="date" name="year_xii_diploma"</td>
                     <td><input type="date" name="year_grad" </td>
                     <td><input type="date" name="year_pg" </td>
                 </tr>
                 <tr>
                     <th>Percentage</th>
                     <td><input type="text" name="percentage_x" maxlength="3" required></td>
-                    <td><input type="text" name="percentage_xii/diploma" maxlength="3" required></td>
+                    <td><input type="text" name="percentage_xii_diploma" maxlength="3" ></td>
                     <td><input type="text" name="percentage_grad" maxlength="3"></td>
                     <td><input type="text" name="percentage_pg" maxlength="3"></td>
                 </tr>
@@ -533,16 +685,49 @@
                     <th>Last Salary Drawn per month</th>
                     <th>Reason for Leaving</th>
                 </tr>
-                {% for _ in range(5) %}
+                
                 <tr>
-                    <td><input type="text" name="org_name"></td>
-                    <td><input type="date" name="from_date"></td>
-                    <td><input type="date" name="to_date"></td>
-                    <td><input type="text" name="designation" maxlength="30"></td>
-                    <td><input type="text" name="last_salary" maxlength="10"></td>
-                    <td><textarea name="reason_leaving" rows="2" cols="20"></textarea></td>
+                    <td><input type="text" name="org_name_1"></td>
+                    <td><input type="date" name="from_date_1"></td>
+                    <td><input type="date" name="to_date_1"></td>
+                    <td><input type="text" name="designation_1" maxlength="30"></td>
+                    <td><input type="text" name="last_salary_1" maxlength="10"></td>
+                    <td><textarea name="reason_leaving_1" rows="2" cols="20"></textarea></td>
                 </tr>
-                {% endfor %}
+		<tr>
+                    <td><input type="text" name="org_name_2"></td>
+                    <td><input type="date" name="from_date_2"></td>
+                    <td><input type="date" name="to_date_2"></td>
+                    <td><input type="text" name="designation_2" maxlength="30"></td>
+                    <td><input type="text" name="last_salary_2" maxlength="10"></td>
+                    <td><textarea name="reason_leaving_2" rows="2" cols="20"></textarea></td>
+                </tr>
+		<tr>
+                    <td><input type="text" name="org_name_3"></td>
+                    <td><input type="date" name="from_date_3"></td>
+                    <td><input type="date" name="to_date_3"></td>
+                    <td><input type="text" name="designation_3" maxlength="30"></td>
+                    <td><input type="text" name="last_salary_3" maxlength="10"></td>
+                    <td><textarea name="reason_leaving_3" rows="2" cols="20"></textarea></td>
+                </tr>
+		<tr>
+                    <td><input type="text" name="org_name_4"></td>
+                    <td><input type="date" name="from_date_4"></td>
+                    <td><input type="date" name="to_date_4"></td>
+                    <td><input type="text" name="designation_4" maxlength="30"></td>
+                    <td><input type="text" name="last_salary_4" maxlength="10"></td>
+                    <td><textarea name="reason_leaving_4" rows="2" cols="20"></textarea></td>
+                </tr>
+		<tr>
+                    <td><input type="text" name="org_name_5"></td>
+                    <td><input type="date" name="from_date_5"></td>
+                    <td><input type="date" name="to_date_5"></td>
+                    <td><input type="text" name="designation_5" maxlength="30"></td>
+                    <td><input type="text" name="last_salary_5" maxlength="10"></td>
+                    <td><textarea name="reason_leaving_5" rows="2" cols="20"></textarea></td>
+                </tr>
+
+                
             </table>
             <br><br>
             <div class="center">
@@ -607,10 +792,10 @@
                 <tr>
                     <td>Languages Known:</td>
                     <td>
-                        <input type="checkbox" name="language_known" value="tamil"> Tamil
-                        <input type="checkbox" name="language_known" value="english"> English
-                        <input type="checkbox" name="language_known" value="hindi"> Hindi
-                        <input type="checkbox" name="language_known" value="other"> Others
+                        <input type="checkbox" name="language_known_t" value="tamil"> Tamil
+                        <input type="checkbox" name="language_known_e" value="english"> English
+                        <input type="checkbox" name="language_known_h" value="hindi"> Hindi
+                        <input type="checkbox" name="language_known_o" value="other"> Others
                     </td>
                 </tr>
                 
@@ -626,14 +811,20 @@
                     <th>Designation</th>
                     <th>Contact Details</th>
                 </tr>
-                {% for _ in range(2) %}
+                
                 <tr>
-                    <td><input type="text" name="reference_name" required></td>
-                    <td><input type="text" name="reference_organisation"></td>
-                    <td><input type="text" name="reference_designation"></td>
-                    <td><input type="number" name="reference_contact" required></td>
+                    <td><input type="text" name="reference_name_1" required></td>
+                    <td><input type="text" name="reference_organisation_1"></td>
+                    <td><input type="text" name="reference_designation_1"></td>
+                    <td><input type="number" name="reference_contact_1" required></td>
                 </tr>
-                {% endfor %}
+		<tr>
+                    <td><input type="text" name="reference_name_2" required></td>
+                    <td><input type="text" name="reference_organisation_2"></td>
+                    <td><input type="text" name="reference_designation_2"></td>
+                    <td><input type="number" name="reference_contact_2" required></td>
+                </tr>
+                
             </table>
             <br><br>
             
@@ -649,7 +840,7 @@
                     <th>UAN No.</th>
                     
                 </tr>
-                {% for _ in range(1) %}
+                
                 <tr>
                     <td><input type="text" name="pan_no" required></td>
                     <td><input type="text" name="aadhar_no" required></td>
@@ -657,7 +848,7 @@
                     <td><input type="text" name="uan_no"></td>
                     
                 </tr>
-                {% endfor %}
+                
             </table>
             <br><br>
 
@@ -674,7 +865,7 @@
                     <th>IFSC code</th>
                     
                 </tr>
-                {% for _ in range(1) %}
+                
                 <tr>
                     <td><input type="number" name="account_number" required></td>
                     <td><input type="text" name="bank_name" required></td>
@@ -682,7 +873,7 @@
                     <td><input type="text" name="branch" required></td>
                     <td><input type="text" name="ifsc_code" required></td>
                 </tr>
-                {% endfor %}
+                
             </table>
             <br><br>
             <table border="1" style="width: 100%;">
